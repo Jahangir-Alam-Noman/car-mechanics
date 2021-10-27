@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.veusr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
+console.log(uri);
 async function run() {
     try {
         await client.connect();
@@ -28,7 +28,7 @@ async function run() {
             res.send(result);
         })
 
-        // get single  api 
+        // get single  apiii 
         app.get('/services/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
@@ -46,7 +46,7 @@ async function run() {
             res.send(result);
         })
 
-        //delete api 
+        //delete apii
         app.delete('/services/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
@@ -66,7 +66,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Running Geniussssssss Car server');
+    res.send('Running GeniusNoman Car server');
 })
 
 app.get('/hello', (req, res) => {
