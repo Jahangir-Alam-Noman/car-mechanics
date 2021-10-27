@@ -66,7 +66,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Running Genius Car server');
+    res.send('Running Geniussssssss Car server');
 })
 
 app.get('/hello', (req, res) => {
